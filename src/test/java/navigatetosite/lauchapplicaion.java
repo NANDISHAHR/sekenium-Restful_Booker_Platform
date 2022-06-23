@@ -93,7 +93,6 @@ public class lauchapplicaion {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//*[@id='collapseBanner']/div/div[3]/div[2]/button"))).click();
-
 		// driver.findElement(By.xpath("//*[@id='collapseBanner']/div/div[3]/div[2]/button")).click();
 	}
 
