@@ -26,6 +26,7 @@ public class browsers extends browserselection{
 		if (browser.equals("msEdge")) {
 			WebDriverManager.edgedriver().setup();
 		    driver = new EdgeDriver();
+		    
 		} else if (browser.equals("Chrome")) {
 			WebDriverManager.chromedriver().setup();
 			 driver = new ChromeDriver();
