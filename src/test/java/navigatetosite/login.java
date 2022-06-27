@@ -15,15 +15,20 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
+import com.aventstack.extentreports.ExtentReports;
+
+import common.BaseTest;
 import common.TestNGListerner;
 
 //@Listeners(TestNGListerner.class)
-public class login extends lauchapplicaion {
+public class login extends BaseTest {
 
-	@Test
+	@Test(groups = {"Sanity"})
 	public void login_applicatinon() {
 		
+		extentTest.info("Scrolling webPage to till form page");
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 
 		WebElement form_page = driver.findElement(By.xpath("//*[@id='root']/div/div/div[4]/div/div/div[3]/h3"));
@@ -31,8 +36,9 @@ public class login extends lauchapplicaion {
 		js.executeScript("arguments[0].scrollIntoView(true);", form_page);
 	}
 	
-	@Test
+	@Test(groups = {"Sanity", "Regression"})
 	public void screenshot_form_page() throws IOException {
+		extentTest.info("Capturing Screen shot of the form page");
 		Date currentdate = new Date();
 	    System.out.println(currentdate);
 	    String screenshotfilename = currentdate.toString().replaceAll(":", "-");
@@ -43,13 +49,18 @@ public class login extends lauchapplicaion {
 	    
 	    File screenshotfile =  ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 	    FileUtils.copyFile(screenshotfile, new File(".//screenshot1//"+screenshotfilename+".png"));
+	    
+		softAssert.assertTrue(true);
+		extentTest.info("Assertion is passed for the WebPage");
 	}
 	
-	@Test
+	@Test(groups = {"Sanity", "Regression" , "Smoke"})
 	public void book_this_room() {
 		
+		extentTest.info("Booking hotel!!!");
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div[4]/div/div/div[3]/button")).click();
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div[4]/div/div[2]/div[2]/div/div[1]/span[1]/button[1]")).click();
 		driver.findElements(By.xpath("//*[@id=\"root\"]/div[2]/div/div[4]/div/div[2]/div[2]/div"));
+		//softAssert.assertTrue(false);
 	}
 }

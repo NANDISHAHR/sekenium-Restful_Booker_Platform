@@ -1,22 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<listeners>
+	<!-- <listeners>
 		<listener class-name="common.TestNGListerner" />
-	</listeners>
-	<test name="Test">
-		<classes>
-			<class name="navigatetosite.lauchapplicaion" />
-		</classes>
-	</test> <!-- Test -->
+	</listeners> -->
+	<!-- Test -->
 	<test name="Test1">
+		<parameter name="browsername" value="Chrome" />
+		<parameter name="author" value="Nandish" />
 		<classes>
-			<class name="navigatetosite.login" />
+			<class name="navigatetosite.navigate">
+				<methods>
+					<include name="navigatetoapplication" />
+				</methods>
+			</class>
 		</classes>
 	</test> <!-- Test -->
 	<test name="Test2">
+		<parameter name="browsername" value="Edge" />
+		<parameter name="author" value="Nandish H R" />
 		<classes>
-			<class name="navigatetosite.navigate" />
+			<class name="navigatetosite.printalllinks">
+				<methods>
+					<include name="printalllinksInapplication" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+	<test name="Test3">
+		<parameter name="browsername" value="Edge" />
+		<parameter name="author" value="Nandisha H R" />
+		<classes>
+			<class name="navigatetosite.lauchapplicaion">
+				<methods>
+					<include name="heading_and_subheading"></include>
+					<include name="no_of_images"></include>
+					<include name="exploartion"></include>
+					<include name="automation"></include>
+					<include name="infrastructure"></include>
+					<include name="Get_Started"></include>
+					<include name="scrorll_and_click"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+	<test name="Test4">
+		<parameter name="browsername" value="Chrome" />
+		<parameter name="author" value="Nandish H R" />
+		<classes>
+			<class name="navigatetosite.login">
+				<methods>
+					<include name="login_applicatinon"></include>
+					<include name="screenshot_form_page"></include>
+					<include name="book_this_room"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Test5">
+		<parameter name="browsername" value="Edge" />
+		<parameter name="author" value="Nandish" />
+		<classes>
+			<class name="navigatetosite.BookingHotel">
+				<methods>
+					<include name="scrollIntoform"></include>
+					<include name="Click_book_room_link"></include>
+					<include name="closing_form"></include>
+					<include name="MonthAndYear"></include>
+					<include name="SelectDatesAndBookHotel"></include>
+					<include name="Bookingsuccess"></include>
+				</methods>
+			</class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,5 +1,6 @@
-package common;
+package Workbook;
 
+import org.apache.poi.xslf.usermodel.XSLFSlideShowFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -21,6 +22,7 @@ public class browsers extends browserselection{
 	@BeforeSuite
 	public void lunchbrowser1() {
 
+		
 		if (browser.equals("msEdge")) {
 			WebDriverManager.edgedriver().setup();
 		    driver = new EdgeDriver();

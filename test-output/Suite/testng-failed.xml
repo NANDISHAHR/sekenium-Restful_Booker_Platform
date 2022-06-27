@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test5(failed)">
+    <parameter name="author" value="Nandish"/>
+    <parameter name="browsername" value="Edge"/>
+    <classes>
+      <class name="navigatetosite.BookingHotel">
+        <methods>
+          <include name="InitialiseBrowser"/>
+          <include name="generateExtentReport"/>
+          <include name="Bookingsuccess"/>
+          <include name="SelectDatesAndBookHotel"/>
+          <include name="initializeExtendReports"/>
+          <include name="teardown"/>
+          <include name="CheckStatus"/>
+        </methods>
+      </class> <!-- navigatetosite.BookingHotel -->
+    </classes>
+  </test> <!-- Test5(failed) -->
+</suite> <!-- Failed suite [Suite] -->

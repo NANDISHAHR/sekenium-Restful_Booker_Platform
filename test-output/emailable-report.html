@@ -9,15 +9,46 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">8,714</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">19,612</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">navigatetosite.BookingHotel</td><td><a href="#m0">Bookingsuccess</a></td><td rowspan="1">1656013650218</td><td rowspan="1">101</td></tr><tr class="passedeven"><td><a href="#m1">Click_book_room_link</a></td><td rowspan="1">1656013647654</td><td rowspan="1">144</td></tr><tr class="passedeven"><td><a href="#m2">MonthAndYear</a></td><td rowspan="1">1656013647884</td><td rowspan="1">836</td></tr><tr class="passedeven"><td><a href="#m3">SelectDatesAndBookHotel</a></td><td rowspan="1">1656013648721</td><td rowspan="1">1496</td></tr><tr class="passedeven"><td><a href="#m4">closing_form</a></td><td rowspan="1">1656013647800</td><td rowspan="1">83</td></tr><tr class="passedeven"><td><a href="#m5">scrollIntoform</a></td><td rowspan="1">1656013647618</td><td rowspan="1">29</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">Errorhandling.PhonenumberFieldErrorshandling</td><td><a href="#m0">teardown</a></td><td rowspan="1">1656320567570</td><td rowspan="1">295</td></tr><tr><th colspan="4">Default test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">Errorhandling.PhonenumberFieldErrorshandling</td><td><a href="#m1">generateExtentReport</a></td><td rowspan="1">1656320567900</td><td rowspan="1">0</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">Errorhandling.PhonenumberFieldErrorshandling</td><td><a href="#m2">InputFiledsErrors</a></td><td rowspan="1">1656320554985</td><td rowspan="1">1706</td></tr><tr class="passedeven"><td><a href="#m3">PhoneNumberError1</a></td><td rowspan="1">1656320556693</td><td rowspan="1">668</td></tr><tr class="passedeven"><td><a href="#m4">PhoneNumberError2</a></td><td rowspan="1">1656320557364</td><td rowspan="1">10204</td></tr><tr class="passedeven"><td><a href="#m5">ScrollingIntoFormPage</a></td><td rowspan="1">1656320554578</td><td rowspan="1">392</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">navigatetosite.BookingHotel#Bookingsuccess</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">navigatetosite.BookingHotel#Click_book_room_link</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">navigatetosite.BookingHotel#MonthAndYear</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">navigatetosite.BookingHotel#SelectDatesAndBookHotel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">navigatetosite.BookingHotel#closing_form</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">navigatetosite.BookingHotel#scrollIntoform</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">Errorhandling.PhonenumberFieldErrorshandling#teardown</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	Email Field error message displayed is wrongly expected [must not be empty
+size must be between 11 and 21] but found [size must be between 11 and 21
+must not be empty]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at common.BaseTest.teardown(BaseTest.java:123)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:645)
+	at org.testng.TestRunner.afterRun(TestRunner.java:893)
+	at org.testng.TestRunner.run(TestRunner.java:606)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Errorhandling.PhonenumberFieldErrorshandling#generateExtentReport</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">Errorhandling.PhonenumberFieldErrorshandling#InputFiledsErrors</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">Errorhandling.PhonenumberFieldErrorshandling#PhoneNumberError1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">Errorhandling.PhonenumberFieldErrorshandling#PhoneNumberError2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">Errorhandling.PhonenumberFieldErrorshandling#ScrollingIntoFormPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

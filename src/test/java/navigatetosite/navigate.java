@@ -1,4 +1,6 @@
 package navigatetosite;
+import static org.testng.Assert.*;
+
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import common.BaseTest;
@@ -16,6 +18,8 @@ public class navigate extends BaseTest{
 		
 		String currnetURL = driver.getCurrentUrl();
 		System.out.println("The current page URL is: "+currnetURL);
+		assertTrue(true);
+		//assertEquals(currnetURL, ExpectedURL);
 		softassert.assertEquals(currnetURL, ExpectedURL , "The Current URL is incorrect");
 		
 		String Title = driver.getTitle();

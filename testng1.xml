@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test4">
+  <parameter name="browsername" value="Chrome" />
+		<classes>
+			<class name="navigatetosite.login">
+				<methods>
+					<include name="login_applicatinon"></include>
+					<include name="screenshot_form_page"></include>
+					<include name="book_this_room"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> <!-- Suite -->

@@ -1,10 +1,11 @@
 package common;
 
+import org.openqa.selenium.devtools.v85.page.Page.CaptureScreenshotFormat;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class TestNGListerner implements ITestListener {
+public class TestNGListerner extends BaseTest implements ITestListener {
 
 	public void onTestStart(ITestResult result) {
 		System.out.println("onTestStart");
@@ -16,6 +17,7 @@ public class TestNGListerner implements ITestListener {
 
 	public void onTestFailure(ITestResult result) {
 		System.out.println("onTestFailure");
+		CapturingScreenshotwhenfails(result.getTestContext().getName()+ "_" +result.getMethod().getMethodName()+".jpg");
 	}
 
 	public void onTestSkipped(ITestResult result) {

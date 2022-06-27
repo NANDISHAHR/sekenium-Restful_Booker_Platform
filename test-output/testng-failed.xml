@@ -3,14 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="navigatetosite.BookingHotel">
+      <class name="navigatetosite.formerrorhandling">
         <methods>
-          <include name="Bookingsuccess"/>
-          <include name="SelectDatesAndBookHotel"/>
-          <include name="setup"/>
+          <include name="InitialiseBrowser"/>
+          <include name="generateExtentReport"/>
+          <include name="initializeExtendReports"/>
+          <include name="InputFiledsErrors"/>
           <include name="teardown"/>
+          <include name="CheckStatus"/>
         </methods>
-      </class> <!-- navigatetosite.BookingHotel -->
+      </class> <!-- navigatetosite.formerrorhandling -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

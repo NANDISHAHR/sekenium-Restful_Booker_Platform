@@ -16,26 +16,15 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import common.BaseTest;
 import common.TestNGListerner;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import net.jodah.failsafe.internal.util.Assert;
 
 //@Listeners(TestNGListerner.class)
-public class lauchapplicaion {
+public class lauchapplicaion extends BaseTest {
 
-	public WebDriver driver;
-	String URL = "https://automationintesting.online/#/";
 	SoftAssert softassert = new SoftAssert();
-
-	@BeforeTest
-	public void openbrowser() {
-
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-		driver.get(URL);
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-	}
 
 	@Test
 	public void heading_and_subheading() {
@@ -96,8 +85,7 @@ public class lauchapplicaion {
 		// driver.findElement(By.xpath("//*[@id='collapseBanner']/div/div[3]/div[2]/button")).click();
 	}
 
-	@AfterTest(enabled = true)
-	public void closebrowser() {
-		driver.close();
-	}
+	/*
+	 * @AfterTest(enabled = true) public void closebrowser() { driver.close(); }
+	 */
 }
